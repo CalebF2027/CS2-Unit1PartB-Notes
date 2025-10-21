@@ -89,6 +89,40 @@ public class Main {
       String lastWord = message.substring(8);
       System.out.println(lastWord);
 
+      // .indexOf() returns an int
+      // the first index of the Sting you're looking for
+      String message1 = "This is cool";
+      String message2 = "This is not cool";
+
+      int indexOfNot1 = message1.indexOf("not");
+      int indexOfNot2 = message2.indexOf("not");
+
+      System.out.println("Index of not in message1: " + indexOfNot1); // -1
+      System.out.println("Index of not in message2: " + indexOfNot2); // 8
+
+      // .equals() allows you to compare the contents of the String objects
+      // it checks EVERY CHARACTER in both, then returns a boolean answer
+      boolean areTheyEqual = message1.equals(message2);
+      System.out.println("Does n1 equal n2? " + areTheyEqual); // false
+      // order doesn't matter here
+      areTheyEqual = message2.equals(message1);
+      System.out.println(areTheyEqual);
+
+      // you can compare String variab;e to a String LITERAL
+      areTheyEqual = message1.equals("This is cool");
+      System.out.println(areTheyEqual); // true
+
+      // .compareTo compares two Strings, character by character
+      // requires an INT representating alphabetical order
+      System.out.println(message1.compareTo("Z"));
+      System.out.println(message1.compareTo("t"));
+      System.out.println(message1.compareTo("A"));
+      // repetitive numbers mean the OTHER strings come AFTER
+      // the original/callig string, message1
+      // positive numbers mean OTHER strings come BEFORE 
+      // "T" is 19 positions away from "A"
+
+
    }
 
 }
